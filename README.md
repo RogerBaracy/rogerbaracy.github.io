@@ -1,6 +1,6 @@
 # Personal Page app (personal_page)
 
-Página Pessoal teste
+Página Pessoal
 
 ## Install the dependencies
 ```bash
