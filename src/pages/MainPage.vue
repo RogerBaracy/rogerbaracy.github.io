@@ -89,7 +89,7 @@
 import { Vue, Component } from 'vue-property-decorator'
 import Carousel from 'components/experience/Carousel.vue'
 @Component({
-  components:{
+  components: {
     Carousel
   }
 })

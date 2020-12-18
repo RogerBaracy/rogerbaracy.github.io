@@ -6,7 +6,7 @@
   "author": "Roger Baracy <rogerbaracy.s@gmail.com>",
   "private": true,
   "scripts": {
-    "publish": "quasar build && ./node_modules/.bin/gh-pages -d dist/spa",
+    "publish": "quasar build --fix && ./node_modules/.bin/gh-pages -d dist/spa",
     "lint": "eslint --ext .js,.ts,.vue ./",
     "test": "echo \"No test specified\" && exit 0"
   },

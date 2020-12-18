@@ -14,13 +14,10 @@
       padding   
       arrows
       class="bg-white text-blue shadow-1 rounded-borders"
-    >
-     
-       <q-carousel-slide v-for="(e , index) in experiencies" v-bind:key="index" v-bind:name="index" class="column no-wrap flex-center">
-        <Experience v-bind:e="e"/>
-        </q-carousel-slide> 
-        
-      
+    >     
+      <q-carousel-slide v-for="(e , index) in experiencies" v-bind:key="index" v-bind:name="index" class="column no-wrap flex-center">
+      <Experience v-bind:e="e"/>
+      </q-carousel-slide>
     </q-carousel>
   </div>
 </template>
@@ -28,19 +25,20 @@
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'
 import Experience from './Experience.vue'
-import {data, Idata} from './data'
+import { data, Idata } from './data'
 @Component({
-  components:{
+  components: {
     Experience
   }
 })
 export default class Carousel extends Vue {
   private experiencies: Array<Idata> = data
-  private slide: number = 0
-  private get name() : number{    
+  private slide = 0
+  private get name () : number {    
     return this.slide
   }
-  private set name(i: number){
+  
+  private set name (i: number) {
     this.slide = i
   }
 }

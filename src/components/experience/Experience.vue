@@ -22,7 +22,7 @@
 
 <script lang="ts">
 import { Vue, Component, Prop } from 'vue-property-decorator'
-import {Idata} from './data'
+import { Idata } from './data'
 @Component
 export default class Experience extends Vue {
   @Prop(Object) readonly e!: Idata  
