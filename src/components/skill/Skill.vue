@@ -16,9 +16,8 @@
 import { Vue, Component, Prop } from 'vue-property-decorator'
 // @ts-ignore
 import VueWordCloud from 'vuewordcloud'
-
 @Component({
-  components:{
+  components: {
     VueWordCloud
   }
 })

@@ -21,13 +21,39 @@
             </q-card-section>
           </q-card> 
         </div>  
-        <div class="row">          
+        <div class="row">  
           <q-card class="q-ma-sm">
-            <q-card-section>
-              <div class="text-h6">Experiências</div>
-            </q-card-section>
-            <q-separator/>
-              <Accordion/>  
+            <q-tabs
+              v-model="tab"
+              dense
+              class="text-grey"
+              active-color="primary"
+              indicator-color="primary"
+              align="justify"
+              narrow-indicator
+            >
+              <q-tab name="experiences" label="Experiências" />
+              <q-tab name="formation" label="Formação" />
+              <q-tab name="curses" label="Outros cursos" />
+            </q-tabs>
+            <q-separator />
+
+            <q-tab-panels v-model="tab" animated>
+              <q-tab-panel name="experiences">
+                <div class="text-h6">Experiências</div>
+                    <AccordionExperiences/> 
+              </q-tab-panel>
+
+              <q-tab-panel name="formation">
+                <div class="text-h6">Formação</div>
+                <AccordionFormations/>
+              </q-tab-panel>
+
+              <q-tab-panel name="curses">
+                <div class="text-h6">Movies</div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </q-tab-panel>
+            </q-tab-panels>
           </q-card>
         </div>
       </div>
@@ -45,15 +71,19 @@
 </template>
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'
-import Accordion from 'components/experience/Accordion.vue'
+import AccordionExperiences from 'components/experience/AccordionExperiences.vue'
+import AccordionFormations from 'components/formation/AccordionFormations.vue'
+
 import Skill from 'components/skill/Skill.vue'
 @Component({
   components: {
-    Accordion,
+    AccordionExperiences,
+    AccordionFormations,
     Skill
   }
 })
 export default class MainPage extends Vue {
+  private tab = 'experiences'
   private name = 'Roger Santos'
   private office = 'Desenvolvedor web'
   private resume = `<p> &nbsp &nbsp &nbsp &nbsp Sou desenvolvedor web há 3 anos, formado em Tecnologia em Redes para Computadores, 
@@ -65,7 +95,7 @@ export default class MainPage extends Vue {
                 </p>`
   private image = 'https://cdn.quasar.dev/img/boy-avatar.png'  
   private skills = [['JavaScript', 10], ['TypeScript', 10], ['PHP', 8], ['VueJS', 10], ['Quasar Framework', 9], ['ElectronJS', 6], ['AdonisJS', 6], 
-  ['NestJS', 5], ['Laravel', 6], ['MySQL', 5], ['Postgres', 4], ['MongoDB', 3]]            
+    ['NestJS', 5], ['Laravel', 6], ['MySQL', 5], ['Postgres', 4], ['MongoDB', 3], ['Docker', 4], ['Git', 6]]            
 }
 </script>
 <style lang="scss" scoped>

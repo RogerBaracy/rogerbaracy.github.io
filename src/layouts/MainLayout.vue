@@ -2,9 +2,7 @@
   <q-layout view="lHh Lpr lFf" class="q-pl-xl q-pr-xl">
     <q-header elevated>
       <q-toolbar class="q-pl-xl q-pr-xl">
-        <q-toolbar-title>
-          Portfolio
-        </q-toolbar-title>        
+        <q-toolbar-title v-text="title"/>
         <q-tabs v-model="tab" shrink stretch>
           <q-tab class="q-pr-md" label="Home" name="home" icon="home" />
           <q-tab class="q-pr-md" label="Projetos" name="settings" icon="settings" />
@@ -22,6 +20,7 @@
 import { Vue, Component } from 'vue-property-decorator'
 @Component
 export default class MainLayout extends Vue {
+  private title = 'Portfolio'
   private tab = 'home'
 }
 </script>

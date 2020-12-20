@@ -1,5 +1,5 @@
 <template>  
-    <q-list bordered>
+    <q-list>
         <q-expansion-item
           v-for="(e , index) in experiencies" 
           v-bind:key="index"
@@ -25,21 +25,25 @@
             </div>
           </q-item-section>
         </template>
-          <Experience v-bind:e="e"/>        
+          <q-card>    
+            <q-card-section class="q-pt-sm">
+              <strong>Principais atividades: </strong>
+              <p v-text="e.activities"></p> 
+              <strong>Tecnologia utilizadas: </strong>  
+              <p v-text="e.technologies"></p>               
+              <strong v-if="e.outherTechnologies"> Outras Tecnologias: </strong>
+              <p v-text="e.outherTechnologies? e.outherTechnologies: ''"></p>
+            </q-card-section>
+          </q-card>        
         </q-expansion-item>
     </q-list>
 </template>
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'
-import Experience from './Experience.vue'
 import { data, Idata } from './data'
-@Component({
-  components: {
-    Experience
-  }
-})
-export default class Accordion extends Vue {
+@Component
+export default class AccordionExperiences extends Vue {
   private experiencies: Array<Idata> = data  
 }
 </script>
