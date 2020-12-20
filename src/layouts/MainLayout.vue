@@ -4,13 +4,12 @@
       <q-toolbar class="q-pl-xl q-pr-xl">
         <q-toolbar-title>
           Portfolio
-        </q-toolbar-title>
-        
-           <q-tabs v-model="tab" shrink stretch>
-            <q-tab class="q-pr-md" label="Home" name="home" icon="home" />
-            <q-tab class="q-pr-md" label="Projetos" name="settings" icon="settings" />
-            <q-tab class="q-pr-md" label="Contato" name="email" icon="email" />
-          </q-tabs>  
+        </q-toolbar-title>        
+        <q-tabs v-model="tab" shrink stretch>
+          <q-tab class="q-pr-md" label="Home" name="home" icon="home" />
+          <q-tab class="q-pr-md" label="Projetos" name="settings" icon="settings" />
+          <q-tab class="q-pr-md" label="Contato" name="email" icon="email" />
+        </q-tabs>  
       </q-toolbar>
     </q-header>
     <q-page-container>
