@@ -17,7 +17,8 @@
     "quasar": "^1.0.0",
     "vue-class-component": "^7.2.2",
     "vue-i18n": "^8.0.0",
-    "vue-property-decorator": "^8.3.0"
+    "vue-property-decorator": "^8.3.0",
+    "vuewordcloud": "^18.7.12"
   },
   "devDependencies": {
     "@quasar/app": "^2.0.0",

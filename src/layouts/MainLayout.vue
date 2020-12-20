@@ -5,13 +5,12 @@
         <q-toolbar-title>
           Portfolio
         </q-toolbar-title>
-        <div>
-           <q-btn-group outline>
-            <q-btn class="q-pr-md" label="Home" icon="home" />
-            <q-btn class="q-pr-md" label="Projetos" icon="settings" />
-            <q-btn class="q-pr-md" label="Contato" icon="email" />
-          </q-btn-group>  
-        </div>
+        
+           <q-tabs v-model="tab" shrink stretch>
+            <q-tab class="q-pr-md" label="Home" name="home" icon="home" />
+            <q-tab class="q-pr-md" label="Projetos" name="settings" icon="settings" />
+            <q-tab class="q-pr-md" label="Contato" name="email" icon="email" />
+          </q-tabs>  
       </q-toolbar>
     </q-header>
     <q-page-container>
@@ -24,5 +23,6 @@
 import { Vue, Component } from 'vue-property-decorator'
 @Component
 export default class MainLayout extends Vue {
+  private tab = 'home'
 }
 </script>
