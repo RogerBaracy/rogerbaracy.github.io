@@ -1,9 +1,9 @@
 <template>
   <q-page>   
     <div class="row">
-      <div class="col-sm-6 col-12">
-        <div class="row">        
-          <q-card class="q-ma-sm">
+      <div class="col-sm-6 col-12">  
+        <div class="row">
+          <q-card class="q-mt-sm q-mr-sm">
             <q-item>
               <q-item-section avatar>
                 <q-avatar>
@@ -11,8 +11,8 @@
                 </q-avatar>
               </q-item-section>
               <q-item-section>
-                <q-item-label class="text-h6" v-text="name"/>
-                <q-item-label class="text-subtitle2" caption v-text="office"/>
+                <q-item-label class="text-h3" v-text="name"/>
+                <q-item-label class="text-subtitle" caption v-text="office"/>
               </q-item-section>
             </q-item>
             <q-separator class="q-ma-none"/>
@@ -20,9 +20,9 @@
               <q-card-section v-html="resume"/>
             </q-card-section>
           </q-card> 
-        </div>  
-        <div class="row">  
-          <q-card class="q-ma-sm">
+        </div> 
+        <div class="row">
+          <q-card class="q-mt-sm q-mr-sm">
             <q-tabs
               v-model="tab"
               dense
@@ -33,38 +33,30 @@
               narrow-indicator
             >
               <q-tab name="experiences" label="Experiências" />
-              <q-tab name="formation" label="Formação" />
-              <q-tab name="curses" label="Outros cursos" />
+              <q-tab name="formations" label="Formação" />
+              <q-tab name="skills" label="Skills" />
+              <!-- <q-tab name="curses" label="Outros cursos" /> -->
             </q-tabs>
             <q-separator />
 
             <q-tab-panels v-model="tab" animated>
               <q-tab-panel name="experiences">
-                <div class="text-h6">Experiências</div>
-                    <AccordionExperiences/> 
+                <AccordionExperiences/> 
               </q-tab-panel>
 
-              <q-tab-panel name="formation">
-                <div class="text-h6">Formação</div>
-                <AccordionFormations/>
+              <q-tab-panel name="formations">
+                <Formations/>
               </q-tab-panel>
-
-              <q-tab-panel name="curses">
+              <q-tab-panel name="skills">
+                <Skill v-bind:skills="skills"/>
+              </q-tab-panel>
+              <!-- <q-tab-panel name="curses">
                 <div class="text-h6">Movies</div>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </q-tab-panel>
+              </q-tab-panel> -->
             </q-tab-panels>
           </q-card>
-        </div>
-      </div>
-      <div class="col-sm-6 col-12">
-        <q-card class="q-ma-sm">
-            <q-card-section>
-              <div class="text-h6">Skills</div>
-            </q-card-section>
-            <q-separator/>
-            <Skill v-bind:skills="skills"/>
-        </q-card>
+        </div>  
       </div>
     </div> 
   </q-page>
@@ -72,13 +64,13 @@
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'
 import AccordionExperiences from 'components/experience/AccordionExperiences.vue'
-import AccordionFormations from 'components/formation/AccordionFormations.vue'
+import Formations from 'components/formation/Formations.vue'
 
 import Skill from 'components/skill/Skill.vue'
 @Component({
   components: {
     AccordionExperiences,
-    AccordionFormations,
+    Formations,
     Skill
   }
 })
@@ -107,4 +99,19 @@ export default class MainPage extends Vue {
     position: relative;
     width: 100%;
 }
+.q-avatar {
+    font-size: 60px;
+}
+.text-caption {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.25rem;
+    letter-spacing: 0.03333em;
+}
+.q-tabs {
+    position: relative;
+    transition: color 0.3s, background-color 0.3s;
+    height: 75px;
+}
+
 </style>

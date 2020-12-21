@@ -9,7 +9,7 @@ export const data: Array<Idata> = [
     institution: 'Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Sul',
     course: 'Tecnologia em Sistemas para Internet',
     dateInit: 'Fev/2018', 
-    dateEnd: 'Dez/2022'  
+    dateEnd: 'Cursando atualmente'  
   },
   {
     institution: 'Faculdade de Tecnologia Brasil',
