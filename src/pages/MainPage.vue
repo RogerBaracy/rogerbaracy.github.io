@@ -1,7 +1,7 @@
 <template>
   <q-page>   
     <div class="row">
-      <div class="col-sm-6 col-12">  
+      <div class="col-md-6 col-12">  
         <div class="row">
           <q-card class="q-mt-sm q-mr-sm">
             <q-item>
@@ -58,6 +58,11 @@
           </q-card>
         </div>  
       </div>
+      <div class="col-sm-6 col-12">
+        <div class="side">
+
+        </div>
+      </div>
     </div> 
   </q-page>
 </template>
@@ -92,12 +97,12 @@ export default class MainPage extends Vue {
 </script>
 <style lang="scss" scoped>
 .q-card {
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12);
+    box-shadow: none;
     border-radius: 4px;
     vertical-align: top;
     background: #fff;
     position: relative;
-    width: 100%;
+    width: 100%;    
 }
 .q-avatar {
     font-size: 60px;
@@ -112,6 +117,21 @@ export default class MainPage extends Vue {
     position: relative;
     transition: color 0.3s, background-color 0.3s;
     height: 75px;
+}
+.side {
+  background-image: url('../assets/images/side_image.jpeg');
+  background-color: #cccccc;
+  width: 100%;
+  height: 800px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+@media only screen and (max-width: 1022px) {
+  .side {
+    display: none;
+  }
 }
 
 </style>
