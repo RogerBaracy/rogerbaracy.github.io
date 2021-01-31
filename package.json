@@ -1,8 +1,8 @@
 {
   "name": "personal_page",
   "version": "0.0.1",
-  "description": "Página Pessoal ",
-  "productName": "Personal Page app",
+  "description": "Página Pessoal",
+  "productName": "Roger Baracy",
   "author": "Roger Baracy <rogerbaracy.s@gmail.com>",
   "private": true,
   "scripts": {

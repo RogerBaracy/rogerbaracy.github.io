@@ -91,7 +91,7 @@ export default class MainPage extends Vue {
                    tenho conhecimentos avançados em Linux, programação nas linguagens PHP e JavaScript/TypeScript,
                    banco de dados MySQL, Postgres e MongoDB.
                 </p>`
-  private image = 'https://cdn.quasar.dev/img/boy-avatar.png'  
+  private image = 'https://avatars.githubusercontent.com/u/29338269?s=460&u=5d9a2f95fb851b167d49a2ecfa929b31fafb7be2&v=4'  
   private skills = [['JavaScript', 10], ['TypeScript', 10], ['PHP', 8], ['VueJS', 10], ['Quasar Framework', 9], ['ElectronJS', 6], ['AdonisJS', 6], 
     ['NestJS', 5], ['Laravel', 6], ['MySQL', 5], ['Postgres', 4], ['MongoDB', 3], ['Docker', 4], ['Git', 6]]            
 }
