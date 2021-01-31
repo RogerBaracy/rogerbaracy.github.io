@@ -32,19 +32,19 @@
                 <q-icon name="date_range" color="primary" size="12px" /> <span class="q-pa-sm" v-text="e.dateEnd"></span>
               </div>
               <div class="row">
-                <strong>Principais atividades: </strong>
+                <strong class="text-grey-8">Principais atividades: </strong>
               </div>
               <div class="row">
                 <p v-text="e.activities"></p> 
               </div>
               <div class="row">
-                <strong>Tecnologia utilizadas: </strong> 
+                <strong class="text-grey-8">Tecnologia utilizadas: </strong> 
               </div>
               <div class="row">
                 <p v-text="e.technologies"></p>   
               </div>
               <div class="row">
-                <strong v-if="e.outherTechnologies"> Outras Tecnologias: </strong> 
+                <strong v-if="e.outherTechnologies" class="text-grey-8"> Outras Tecnologias: </strong> 
               </div>  
               <div class="row">
                 <p v-text="e.outherTechnologies? e.outherTechnologies: ''"></p>
