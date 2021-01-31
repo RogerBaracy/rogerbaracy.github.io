@@ -3,11 +3,11 @@
     <q-header elevated>
       <q-toolbar class="q-pl-xl q-pr-xl">
         <q-toolbar-title v-text="title" class="mobile-hide"/>
-        <q-tabs v-model="tab" shrink stretch>
+        <!-- <q-tabs v-model="tab" shrink stretch>
           <q-tab class="q-pr-md" label="Home" name="home" icon="home" />
           <q-tab class="q-pr-md" label="Projetos" name="settings" icon="settings" />
           <q-tab class="q-pr-md" label="Contato" name="email" icon="email" />
-        </q-tabs>  
+        </q-tabs>   -->
       </q-toolbar>
     </q-header>
     <q-page-container>
@@ -25,7 +25,7 @@ export default class MainLayout extends Vue {
 }
 </script>
 <style lang="scss">
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 470px) {
   .q-toolbar__title {
     display: none;
   }

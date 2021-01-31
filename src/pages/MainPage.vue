@@ -83,12 +83,13 @@ export default class MainPage extends Vue {
   private tab = 'experiences'
   private name = 'Roger Santos'
   private office = 'Desenvolvedor web'
-  private resume = `<p> &nbsp &nbsp &nbsp &nbsp Sou desenvolvedor web há 3 anos, formado em Tecnologia em Redes para Computadores, 
-                  estudante do 5º semestre do curso de Tecnologia em Sistemas para Internet pelo Instituto Federal 
-                  do Rio Grande do Sul, Campus Porto Alegre.
+  private resume = `<p> &nbsp &nbsp &nbsp &nbsp Sou desenvolvedor web há 3 anos, 
+  formado em Tecnologia em Redes para Computadores, estudante do 5º semestre do curso de Tecnologia em Sistemas
+  para Internet pelo Instituto Federal do Rio Grande do Sul, Campus Porto Alegre.
                 <br>
-                   &nbsp &nbsp &nbsp &nbsp Possuo 8 anos de experiência na área de informática, tenho conhecimentos avançados em Linux, programação nas linguagens PHP e JavaScript/TypeScript, banco de dados 
-                   MySQL, Postgres e MongoDB.
+                   &nbsp &nbsp &nbsp &nbsp Possuo 8 anos de experiência na área de informática, 
+                   tenho conhecimentos avançados em Linux, programação nas linguagens PHP e JavaScript/TypeScript,
+                   banco de dados MySQL, Postgres e MongoDB.
                 </p>`
   private image = 'https://cdn.quasar.dev/img/boy-avatar.png'  
   private skills = [['JavaScript', 10], ['TypeScript', 10], ['PHP', 8], ['VueJS', 10], ['Quasar Framework', 9], ['ElectronJS', 6], ['AdonisJS', 6], 
@@ -119,14 +120,12 @@ export default class MainPage extends Vue {
     height: 75px;
 }
 .side {
-  background-image: url('../assets/images/side_image.jpeg');
+  background-image: url('../assets/images/side_image.jpeg');  
   background-color: #cccccc;
-  width: 100%;
   height: 800px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
 }
 @media only screen and (max-width: 1022px) {
   .side {
