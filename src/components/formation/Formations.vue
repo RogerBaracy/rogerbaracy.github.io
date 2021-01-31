@@ -1,20 +1,18 @@
 <template> 
   <div>
-    <q-card v-for="(f, index) in formations" v-bind:key="index" class="q-mt-sm">    
+    <q-card v-for="(f, index) in formations" v-bind:key="index" class="q-mt-md">    
       <q-item>
-        <q-item-section avatar>
+        <q-item-section avatar class="mobile-hide">
           <q-avatar icon="school" color="primary" text-color="white" />
         </q-item-section>
         <q-item-section>
-          <q-item-label class="text-h6" v-text="f.course"/>
-          <q-item-label class="text-subtitle2" caption v-text="f.institution"/>
-        </q-item-section>
-        <q-item-section side>
-           <div class="row items-center">
-            <q-icon name="date_range" color="primary" size="12px" /> <span class="q-pa-sm" v-text="f.dateInit"></span>
-            <q-icon name="date_range" color="primary" size="12px" /> <span class="q-pa-sm" v-text="f.dateEnd"></span>
+          <p class="text-primary" v-text="f.course"/>
+          <div class="row items-center">
+            <q-icon name="date_range" color="primary" size="12px" class="q-pa-sm" /> <span v-text="f.dateInit"></span>
+            <q-icon name="date_range" color="primary" size="12px" class="q-pa-sm" /> <span v-text="f.dateEnd"></span>
            </div>
-        </q-item-section>  
+          <q-item-label class="text-subtitle2 q-pl-sm"  caption v-text="f.institution"/>
+        </q-item-section>        
       </q-item>          
     </q-card>
   </div>            
@@ -33,7 +31,6 @@ export default class Formations extends Vue {
   box-shadow: none;
   border-radius: 4px;
   vertical-align: top;
-  background: #fff;
   position: relative;
   width: 100%;
 }

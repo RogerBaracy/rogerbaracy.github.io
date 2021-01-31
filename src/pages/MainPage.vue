@@ -5,14 +5,14 @@
         <div class="row">
           <q-card class="q-mt-sm q-mr-sm">
             <q-item>
-              <q-item-section avatar>
+              <q-item-section avatar class="mobile-hide">
                 <q-avatar>
                   <img v-bind:src="image">
                 </q-avatar>
               </q-item-section>
               <q-item-section>
-                <q-item-label class="text-h3" v-text="name"/>
-                <q-item-label class="text-subtitle" caption v-text="office"/>
+                <q-item-label class="text-h3 text-primary" v-text="name"/>
+                <q-item-label class="text-subtitle text-grey-8" caption v-text="office"/>
               </q-item-section>
             </q-item>
             <q-separator class="q-ma-none"/>
@@ -101,9 +101,11 @@ export default class MainPage extends Vue {
     box-shadow: none;
     border-radius: 4px;
     vertical-align: top;
-    background: #fff;
     position: relative;
     width: 100%;    
+}
+.q-card--dark {
+    border-color: rgb(29, 29, 29);
 }
 .q-avatar {
     font-size: 60px;
@@ -120,12 +122,13 @@ export default class MainPage extends Vue {
     height: 75px;
 }
 .side {
-  background-image: url('../assets/images/side_image.jpeg');  
-  background-color: #cccccc;
-  height: 800px;
+  background-image: url('../assets/images/side_image.png'); 
+  width: 100%; 
+  height: 90vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  margin-top: 20px;
 }
 @media only screen and (max-width: 1022px) {
   .side {
