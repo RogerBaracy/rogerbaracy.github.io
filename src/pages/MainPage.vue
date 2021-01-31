@@ -6,7 +6,7 @@
           <q-card class="q-mt-sm q-mr-sm">
             <q-item>
               <q-item-section avatar class="mobile-hide">
-                <q-avatar>
+                <q-avatar size="100px">
                   <img v-bind:src="image">
                 </q-avatar>
               </q-item-section>
