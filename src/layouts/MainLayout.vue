@@ -29,7 +29,7 @@
 import { Vue, Component, Watch } from 'vue-property-decorator'
 @Component
 export default class MainLayout extends Vue {
-  private title = 'Portfolio'
+  private title = ''
   private isDark = true
   private tab = 'home'
   

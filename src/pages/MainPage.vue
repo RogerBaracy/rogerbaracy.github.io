@@ -83,14 +83,12 @@ export default class MainPage extends Vue {
   private tab = 'experiences'
   private name = 'Roger Santos'
   private office = 'Desenvolvedor web'
-  private resume = `<p> &nbsp &nbsp &nbsp &nbsp Sou desenvolvedor web há 3 anos, 
-  formado em Tecnologia em Redes para Computadores, estudante do 5º semestre do curso de Tecnologia em Sistemas
-  para Internet pelo Instituto Federal do Rio Grande do Sul, Campus Porto Alegre.
-                <br>
-                   &nbsp &nbsp &nbsp &nbsp Possuo 8 anos de experiência na área de informática, 
-                   tenho conhecimentos avançados em Linux, programação nas linguagens PHP e JavaScript/TypeScript,
-                   banco de dados MySQL, Postgres e MongoDB.
-                </p>`
+  private resume = `<p> &nbsp &nbsp &nbsp &nbsp Sou desenvolvedor web, formado em Tecnologia em Redes para Computadores, 
+  e estudante do 5º semestre do curso de Tecnologia em Sistemas para Internet pelo Instituto Federal do Rio Grande do Sul, Campus Porto Alegre.
+  <br>
+      &nbsp &nbsp &nbsp &nbsp Possuo experiência em servidores Linux, 
+      conhecimentos em programação nas linguagens PHP e JavaScript/TypeScript, banco de dados MySQL, Postgres e MongoDB.
+  </p>`
   private image = 'https://avatars.githubusercontent.com/u/29338269?s=460&u=5d9a2f95fb851b167d49a2ecfa929b31fafb7be2&v=4'  
   private skills = [['JavaScript', 10], ['TypeScript', 10], ['PHP', 8], ['VueJS', 10], ['Quasar Framework', 9], ['ElectronJS', 6], ['AdonisJS', 6], 
     ['NestJS', 5], ['Laravel', 6], ['MySQL', 5], ['Postgres', 4], ['MongoDB', 3], ['Docker', 4], ['Git', 6]]            
